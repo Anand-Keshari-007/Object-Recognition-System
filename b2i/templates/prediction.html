@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+    <title>Object Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}"}>
+</head>
+<body>
+<h1> Object Recognition System</h1>
+    <form action="" class="form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if request.method == 'POST' %}
+        <div class="split box">
+            <img src="{{obj.img.url}}" class="Image">
+        </div>
+        <div class="split list"><ol class = "lst" type="i">
+        {% for r in results %}
+             <li>{{r}}</li><br>
+        {% endfor %}
+        </ol></div>
+
+        {% else %}
+        <div class = "ff">{{form.as_p}}</div>
+        <input class="button"type="submit" value="Predict">
+        {% endif %}
+        </form><br/>
+       <div class="a"><a href="{% url 'predict' %}"> Refresh The Page </a></div>
+
+</body>
+</html>

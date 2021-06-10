@@ -24,7 +24,7 @@ def main():
 
 # create a function to prepare image
 def prepare_image(file):
-    file = '''E:\ANAND's STUFF\\new\\''' + file
+    file = settings.BASE_DIR.__str__() + file
     mobile = keras.applications.mobilenet.MobileNet()
     img_path = ''
     img = keras.preprocessing.image.load_img(img_path + file, target_size=(224, 224))

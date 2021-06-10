@@ -6,3 +6,6 @@ Before running the project on computer make sure you have following packages ins
 3.  keras         ---> ("run command--  pip install keras")
 4.  numpy         ---> ("run command--  pip install numpy")
 5.  pickle        ---> ("run command--  pip install pickle")
+
+Then download the zip file of the repository and unzip it then open commond prompt at the location where you unzipped the project
+and run command ("python manage.py runserver")
